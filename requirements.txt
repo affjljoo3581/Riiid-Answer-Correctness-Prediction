@@ -1,0 +1,6 @@
+pandas
+torch>=1.7.0
+numpy
+PyYAML
+scikit_learn
+torch_optimizer

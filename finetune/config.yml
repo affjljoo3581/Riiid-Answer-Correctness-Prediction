@@ -1,0 +1,37 @@
+
+datasets:
+  vocab_path:           ../datasets/vocab.txt
+  train_dataset_path:   ../datasets/train.txt
+  val_dataset_path:     ../datasets/val.txt
+
+  num_workers:          6
+
+  positive_ratio:       0.6572
+
+  seq_len:              128
+  max_lag_time:         500
+  max_pqet:             500
+
+model:
+  num_layers:           6
+  num_heads:            8
+
+  hidden_dims:          512
+  bottleneck:           4
+
+  dropout_rate:         0.1
+
+training:
+  train_batch_size:     64
+  val_batch_size:       512
+
+  base_lr:              0.0001
+  weight_decay:         0.01
+
+  total_steps:          100000
+  val_steps:            5000
+
+  early_stop:           True
+  clip_grad_norm:       1
+  use_amp:              False
+  num_gpus:             1
